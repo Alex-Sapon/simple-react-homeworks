@@ -1,6 +1,7 @@
 import React from 'react'
+import styles from './Message.module.css';
 
-export type MessageDataType = {
+type MessageDataType = {
     avatar: string
     name: string
     message: string
@@ -9,11 +10,11 @@ export type MessageDataType = {
 
 function Message(props: MessageDataType) {
     return (
-        <div>
-            <img src={props.avatar} alt=""/>
-            <p>{props.name}</p>
-            <p>{props.message}</p>
-            <div>{props.time}</div>
+        <div className={styles.container}>
+            <img className={styles.image} src={props.avatar} alt=""/>
+            <p className={styles.title}>{props.name}</p>
+            <p className={styles.text}>{props.message}</p>
+            <div className={styles.time}>{props.time}</div>
         </div>
     )
 }
