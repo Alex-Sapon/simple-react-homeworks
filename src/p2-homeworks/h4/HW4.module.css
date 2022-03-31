@@ -1,6 +1,12 @@
 .blue {
     border-bottom: 5px solid blue;
     outline: none;
+    margin-bottom: 10px;
+}
+
+.blue:focus {
+    border-bottom: 1px solid steelblue;
+    margin-bottom: 14px;
 }
 
 .column {

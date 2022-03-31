@@ -30,7 +30,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                 value={name}
                 onKeyPress={onKeyPressHandler}
                 onChange={setNameCallback}
-                className={`${s.input} ${inputClass}`}
+                className={`${inputClass}`}
                 onBlur={onBlurHandler}
             />
 

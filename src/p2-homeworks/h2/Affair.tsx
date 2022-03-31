@@ -16,7 +16,13 @@ function Affair(props: AffairPropsType) {
             <li className={styles.wrapper}>
                 <span className={styles.title}>{props.affair.name}</span>
                 <span className={styles.subtitle}>{props.affair.priority}</span>
-                <SuperButton className={styles.button} onClick={deleteCallback}>x</SuperButton>
+                <SuperButton 
+                remove 
+                className={styles.button_remove} 
+                onClick={deleteCallback}
+                >
+                    x
+                </SuperButton>
 
                 {/*<button className={styles.button} onClick={deleteCallback}>X</button>*/}
             </li>

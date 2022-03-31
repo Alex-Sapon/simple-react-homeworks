@@ -5,6 +5,7 @@
     border-radius: 4px;
     margin: 1rem;
     background-color: powderblue;
+    min-height: 380px;
 }
 
 .todoContainer {
