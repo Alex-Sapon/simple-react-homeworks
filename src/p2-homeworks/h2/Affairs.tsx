@@ -10,32 +10,23 @@ type AffairsPropsType = {
     deleteAffairCallback: (_id: number) => void
 }
 
-function Affairs(props: AffairsPropsType) {
-    const mappedAffairs = props.data.map((a: AffairType) => (
-        <Affair
-            key={a._id}// кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
-            affair={a}
-            deleteAffairCallback={props.deleteAffairCallback}
-        />
+function Affairs({data, setFilter, deleteAffairCallback}: AffairsPropsType) {
+    const mappedAffairs = data.map((a: AffairType) => (
+        <Affair key={a._id} affair={a} deleteAffairCallback={deleteAffairCallback}/>
     ))
 
-    const setAll = () => {props.setFilter('all')}
-    const setHigh = () => {props.setFilter('high')}
-    const setMiddle = () => {props.setFilter('middle')}
-    const setLow = () => {props.setFilter('low')}
+    const setAll = () => setFilter('all')
+    const setHigh = () => setFilter('high')
+    const setMiddle = () => setFilter('middle')
+    const setLow = () => setFilter('low')
 
     return (
-        <div className={styles.todo}>
-            <div className={styles.todoContainer}>
+        <div className={styles.todo_container}>
+            <div className={styles.todo_item}>
                 <SuperButton className={styles.button} onClick={setAll}>All</SuperButton>
                 <SuperButton className={styles.button} onClick={setHigh}>High</SuperButton>
                 <SuperButton className={styles.button} onClick={setMiddle}>Middle</SuperButton>
                 <SuperButton className={styles.button} onClick={setLow}>Low</SuperButton>
-
-                {/*<button className={styles.button} onClick={setAll}>All</button>*/}
-                {/*<button className={styles.button} onClick={setHigh}>High</button>*/}
-                {/*<button className={styles.button} onClick={setMiddle}>Middle</button>*/}
-                {/*<button className={styles.button} onClick={setLow}>Low</button>*/}
             </div>
             {mappedAffairs}
         </div>

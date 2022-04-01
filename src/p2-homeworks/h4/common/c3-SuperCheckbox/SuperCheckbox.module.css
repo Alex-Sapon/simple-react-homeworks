@@ -1,7 +1,17 @@
-.checkbox {
+.label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
+.checkbox {
+    margin-right: 1rem;
+    align-items: center;
+    text-align: center;
 }
 
 .spanClassName {
-
+    align-items: center;
+    text-align: center;
 }

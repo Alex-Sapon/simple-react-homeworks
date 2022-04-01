@@ -13,6 +13,7 @@ function HW4() {
             alert('введите текст...')
         } else {
             alert(text) // если нет ошибки показать текст
+            setText('')
         }
     }
 
@@ -22,8 +23,7 @@ function HW4() {
     return (
         <div>
             <hr/>
-            homeworks 4
-
+            <h2>Homeworks 4</h2>
             <div className={s.column}>
                 <SuperInputText
                     value={text}
@@ -32,11 +32,10 @@ function HW4() {
                     error={error}
                     // spanClassName= {s.testSpanError}
                 />
-
+                
                 <SuperInputText
                     className={s.blue} // проверьте, работает ли смешивание классов
                 />
-
                 {/*----------------------------------------------------*/}
 
                 <SuperButton>

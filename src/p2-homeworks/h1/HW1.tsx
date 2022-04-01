@@ -12,10 +12,8 @@ function HW1() {
     return (
         <div>
             <hr/>
-            homeworks 1
-
-            should work (должно работать)
-
+            <h2>Homeworks 1</h2>
+            {/* should work (должно работать) */}
             <Message
                 avatar={messageData.avatar}
                 name={messageData.name}

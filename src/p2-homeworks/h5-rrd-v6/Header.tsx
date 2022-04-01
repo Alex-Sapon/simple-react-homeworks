@@ -1,22 +1,20 @@
 import React, {FC} from 'react'
-import { NavLink } from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import styles from './Header.module.css'
-import arrow from './img/arrow.png'
+import {PATH} from './Pages'
 
 const Header: FC = () => {
-    const setActiveClass = (navData: {isActive: boolean}): string => navData.isActive ? styles.link_active : styles.link_default
+    const setFinalClasses = (navData: { isActive: boolean }): string => navData.isActive ? styles.active : styles.link
 
     return (
-        <nav className={`${styles.nav_wrapper}`}>
-            <ul className={styles.links}>
-                <li><NavLink to={'/pre-junior'} className={setActiveClass}>PreJunior</NavLink></li>
-                <li><NavLink to={'/junior'} className={setActiveClass}>Junior</NavLink></li>
-                <li><NavLink to={'/junior-upper'} className={setActiveClass}>Junior+</NavLink></li>
-            </ul>
-            <div className={styles.nav_arrow}>
-                <img src={arrow} alt="arrow" />
-            </div>
-        </nav>
+        <div className={styles.nav_container}>
+            <nav className={styles.nav_wrapper}>
+                <NavLink to={PATH.PRE_JUNIOR} className={setFinalClasses}>PreJunior</NavLink>
+                <NavLink to={PATH.JUNIOR} className={setFinalClasses}>Junior</NavLink>
+                <NavLink to={PATH.JUNIOR_UPPER} className={setFinalClasses}>Junior+</NavLink>
+            </nav>
+        </div>
+
     )
 }
 
