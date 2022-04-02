@@ -1,12 +1,6 @@
-.someClass {
-
+.input {
+    height: 60px;
 }
-
-/* .input {
-    padding: 5px;
-    border-radius: 4px;
-    outline: none;
-} */
 
 .input:focus {
     border: 1px solid steelblue;
@@ -14,8 +8,13 @@
 }
 
 .wrapper {
-    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 10px 26px;
     position: relative;
+    padding-top: 22px;
 }
 
 .active {
@@ -24,20 +23,16 @@
 
 .error {
     border: 1px solid red;
-}
-
-.error_block {
-    position: absolute;
-    top: 39px;
-    left: 375px;
-    padding: 10px;
-    color: red;
+    display: flex;
+    flex-direction: column;
 }
 
 .button {
     margin-left: 10px;
+    margin-bottom: 34px;
 }
 
 .counter {
     margin-left: 10px;
+    padding-bottom: 30px;
 }

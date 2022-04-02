@@ -20,22 +20,22 @@ const Greeting: React.FC<GreetingPropsType> = (
         name, setNameCallback, addUser, error,
         totalUsers, onKeyPressHandler, setError
     }) => {
-    const inputClass = error ? s.error : s.active
 
-    const onBlurHandler = () => {
-        setError && setError('')
-    }
+    const inputClass = error ? s.error : s.active
+    const onBlurHandler = () => setError && setError('')
 
     return (
         <div className={s.wrapper}>
-            <SuperInputText
-                value={name}
-                onKeyPress={onKeyPressHandler}
-                onChange={setNameCallback}
-                className={`${inputClass}`}
-                onBlur={onBlurHandler}
-            />
-            <span className={s.error_block}>{error}</span>
+            <div className={s.input}>
+                <SuperInputText
+                    error={error}
+                    value={name}
+                    onKeyPress={onKeyPressHandler}
+                    onChange={setNameCallback}
+                    className={inputClass}
+                    onBlur={onBlurHandler}
+                />
+            </div>
             <SuperButton className={s.button} onClick={addUser}>add</SuperButton>
             <span className={s.counter}>Users: {totalUsers}</span>
         </div>

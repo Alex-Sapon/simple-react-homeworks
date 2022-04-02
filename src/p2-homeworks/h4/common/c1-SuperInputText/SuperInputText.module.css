@@ -2,7 +2,6 @@
     padding: 8px;
     border-radius: 4px;
     outline: none;
-    position: relative;
     border: 1px solid steelblue;
 }
 
@@ -12,7 +11,6 @@
 
 .superInput {
     border: 1px solid steelblue;
-    margin-bottom: 26px;
 }
 
 .errorInput {
@@ -21,5 +19,6 @@
 
 .error {
     color: red;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: -31px;
 }
