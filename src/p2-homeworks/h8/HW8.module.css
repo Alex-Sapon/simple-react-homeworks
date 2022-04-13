@@ -1,0 +1,16 @@
+.wrapper {
+    margin: 1rem auto;
+    min-height: 280px;
+    max-width: 260px;
+}
+
+.item {
+    margin: 0 auto 0.5rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    align-items: center;
+    text-align: left;
+}
