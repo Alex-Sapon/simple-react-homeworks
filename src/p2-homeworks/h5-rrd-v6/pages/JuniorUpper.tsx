@@ -10,6 +10,3 @@ function JuniorUpper() {
 }
 
 export default JuniorUpper
-
-// сделайте по аналогии пустые страницы джун и джун+
-// туда будут добавляться следующие дз
