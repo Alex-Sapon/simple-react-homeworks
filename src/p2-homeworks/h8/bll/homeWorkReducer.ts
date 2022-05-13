@@ -1,7 +1,8 @@
-import { ActionsType, UserType } from "../HW8"
+import {ActionsType, UserType} from '../HW8'
 
 export const homeWorkReducer = (state: UserType[], action: ActionsType): UserType[] => {
     switch (action.type) {
+        // @ts-ignore
         case 'sort': {
             switch (action.payload) {
                 case 'up':
@@ -13,7 +14,7 @@ export const homeWorkReducer = (state: UserType[], action: ActionsType): UserTyp
         case 'check': {
             return state.filter(i => i.age > action.payload)
         }
-        default: 
+        default:
             return state
     }
 }
