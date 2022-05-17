@@ -38,10 +38,7 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = props => {
     return (
         <>
             <div className={styles.slider}>
-                <div 
-                    className={styles.slider_progress} 
-                    style={progressBar}
-                ></div>
+                <div className={styles.slider_progress} style={progressBar}></div>
             </div>
             <div className={styles.slider_inputs} >
                 <input 

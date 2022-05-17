@@ -1,3 +1,8 @@
+.radio_container {
+    width: 70px;
+    margin: 0 auto;
+}
+
 .dark {
     background: dimgrey;
 }
@@ -12,6 +17,22 @@
 
 .red-text {
     color: aqua;
+}
+
+.yellow {
+    background: yellow;
+}
+
+.yellow-text {
+    color: lightcoral;
+}
+
+.pink {
+    background: pink;
+}
+
+.pink-text {
+    color: cornflowerblue;
 }
 
 .some {
